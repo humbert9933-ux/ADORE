@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADÓRE | Estética Facial y Corporal</title>
+    <meta name="description" content="ADÓRE es un centro de estética facial y corporal en Trinidad con tratamientos personalizados, medic spa, solarium y promociones de bienestar." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "TU_PIXEL_ID"); // <-- REEMPLAZA AQUÍ CON TU ID DE PÍXEL
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1" />
+    </noscript>
+    </head>
+  <body>
+    <header class="site-header" id="inicio">
+      <a class="logo-card" href="#inicio" aria-label="ADÓRE inicio">
+        <img src="assets/adore-logo.jpg" alt="Logo de ADÓRE Centro Estético" />
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#reservas" class="nav-btn">Reservar Cita</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Resalta tu belleza natural</h1>
+          <p>Tratamientos estéticos avanzados de nivel Medic Spa y Solarium con resultados garantizados.</p>
+          <a href="#reservas" class="btn-primary">Agendar Ahora</a>
+        </div>
+      </section>
+
+      <section id="servicios" class="services-section">
+        <h2 class="section-title">Nuestros Tratamientos</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Facial Personalizado</h3>
+            <p>Limpieza profunda y nutrición celular adaptada a las necesidades específicas de tu piel.</p>
+          </div>
+          <div class="service-card">
+            <h3>Solarium &amp; Bronceado</h3>
+            <p>Bronceado brasilero y convencional de alta definición para un tono espectacular todo el año.</p>
+          </div>
+          <div class="service-card">
+            <h3>Medic Spa</h3>
+            <p>Procedimientos clínico-estéticos avanzados diseñados para rejuvenecer y renovar.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="reservas" class="booking-section">
+        <div class="form-container">
+          <h2>Solicitar una Reserva</h2>
+          <p>Elige tu tratamiento ideal y la fecha que prefieras. Nos comunicaremos contigo para confirmar.</p>
+          
+          <form class="booking-form">
+            <label>
+              Nombre Completo
+              <input type="text" name="name" required placeholder="Ej. Carla Mendez" />
+            </label>
+            <label>
+              Teléfono de Contacto (WhatsApp)
+              <input type="tel" name="phone" required placeholder="Ej. 73903259" />
+            </label>
+            <label>
+              Tratamiento Deseado
+              <select name="treatment" required>
+                <option>Facial personalizado</option>
+                <option>Tratamiento corporal</option>
+                <option>Medic spa</option>
+                <option>Solarium</option>
+                <option>Dermaplaning glow</option>
+                <option>Hidratación profunda</option>
+                <option>Bronceado brasilero</option>
+                <option>Bronceado normal</option>
+                <option>Baño de luna</option>
+                <option>Masaje relax</option>
+                <option>Radiofrecuencia</option>
+                <option>Paquete Adóre completo</option>
+              </select>
+            </label>
+            <label>
+              Fecha Preferida
+              <input type="date" name="date" required />
+            </label>
+            <button type="submit">Solicitar Reserva</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h2>ADÓRE</h2>
+        <p>Estética Facial y Corporal<br />Medic Spa y Solarium<br />Trinidad - Bolivia</p>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <p>Av. Ejército, entre Sucre y Rodolfo Arauz<br />Casa N.º 513<br />WhatsApp: 73903259</p>
+      </div>
+      <small>&copy; 2026 ADÓRE Centro Estético. Todos los derechos reservados.</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

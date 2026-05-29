@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Administrador | ADÓRE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <style>
+      body { background-color: var(--black); color: var(--text); padding: 40px 20px; }
+      .admin-container { max-width: 1100px; margin: 0 auto; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 30px; }
+      .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px; }
+      .admin-header h1 { margin: 0; color: var(--gold); font-size: 26px; font-family: 'Playfair Display', serif; }
+      .controls { display: flex; gap: 15px; flex-wrap: wrap; }
+      select, .btn-action { padding: 10px 16px; border-radius: 6px; border: 1px solid var(--line); background: var(--soft-panel); color: var(--text); font-size: 14px; cursor: pointer; font-weight: 500; }
+      .btn-action { background: linear-gradient(90deg, var(--gold-soft), var(--bronze)); color: var(--black); font-weight: 600; border: none; }
+      .btn-danger { background: #3a1515; color: #ff8a8a; border: 1px solid #ff8a8a; }
+      .table-wrapper { overflow-x: auto; margin-top: 20px; }
+      table { width: 100%; border-collapse: collapse; text-align: left; }
+      th, td { padding: 16px; border-bottom: 1px solid var(--line); }
+      th { color: var(--gold); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }
+      .status-select { background: var(--black); border: 1px solid var(--line); color: var(--text); padding: 6px 10px; border-radius: 4px; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <div class="admin-container">
+      <div class="admin-header">
+        <h1>Control de Citas - ADÓRE</h1>
+        <div class="controls">
+          <select id="statusFilter">
+            <option value="Todos">Todos los estados</option>
+            <option value="Pendiente">Pendientes</option>
+            <option value="Confirmada">Confirmadas</option>
+            <option value="Atendida">Atendidas</option>
+            <option value="Cancelada">Canceladas</option>
+          </select>
+          <button id="seedData" class="btn-action">Cargar Demo</button>
+          <button id="clearData" class="btn-action btn-danger">Limpiar Base</button>
+        </div>
+      </div>
+      
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Teléfono</th>
+              <th>Tratamiento</th>
+              <th>Fecha Solicitada</th>
+              <th>Cambiar Estado</th>
+            </tr>
+          </thead>
+          <tbody id="bookingRows">
+            </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>

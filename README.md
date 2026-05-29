@@ -8,7 +8,7 @@ Este repositorio contiene el código fuente de la página de aterrizaje (landing
 *   **Formulario de Reservas Dinámico:** Sistema de agendamiento integrado donde los clientes pueden elegir tratamientos y fechas preferidas.
 *   **Panel de Administración (`admin.html`):** Interfaz privada para visualizar, filtrar y gestionar el estado de las citas (Pendiente, Confirmada, Atendida, Cancelada).
 *   **Almacenamiento Local Inteligente:** Las reservas se guardan de forma segura en el `localStorage` del navegador, permitiendo que el sistema funcione perfectamente en un entorno estático sin necesidad de un backend activo.
-*   **Integración Publicitaria (Meta Pixel):** Código base preconfigurado con el disparador de conversión estándar `Schedule` (Cita Programada), listo para medir la efectividad de las campañas en Facebook e Instagram Ads.
+*   **Integración Publicitaria (Meta Pixel):** El proyecto incluye el código de Meta Pixel configurado con el disparador de conversión estándar `Schedule` (Cita Programada) para medir la efectividad de las campañas publicitarias.
 
 ## 📁 Estructura del Proyecto
 
@@ -18,15 +18,6 @@ Este repositorio contiene el código fuente de la página de aterrizaje (landing
 *   `admin.html`: Interfaz del tablero de control (Dashboard) para la administración.
 *   `admin.js`: Lógica encargada de leer los datos guardados, pintar la tabla y actualizar los estados de las reservas.
 *   `assets/`: Directorio destinado a los recursos visuales (logos, imágenes de fondo, etc.).
-
-## ⚙️ Configuración del Píxel de Meta
-
-Para que el seguimiento de conversiones funcione correctamente con tus campañas publicitarias:
-
-1. Abre el archivo `index.html` en tu editor de código.
-2. Localiza el bloque de código del Meta Pixel (dentro de la etiqueta `<head>`).
-3. Busca la línea: `fbq("init", "TU_PIXEL_ID");` y reemplaza `"TU_PIXEL_ID"` con el identificador numérico real proporcionado por tu Meta Business Manager.
-4. Modifica también el enlace de respaldo `<img src="https://www.facebook.com/tr?id=TU_PIXEL_ID...` con el mismo ID.
 
 ## 🌐 Instrucciones de Despliegue (GitHub Pages)
 

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard | ADÓRE</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <aside class="admin-sidebar">
+      <a class="admin-brand" href="index.html">
+        <img src="assets/logo-adore-oficial.jpg?v=2" alt="Logo ADÓRE" />
+        <span>ADÓRE</span>
+      </a>
+      <nav>
+        <a class="active" href="#resumen">Resumen</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#servicios">Servicios</a>
+      </nav>
+      <a class="site-link" href="index.html">Ver sitio público</a>
+    </aside>
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <p>Panel administrativo</p>
+          <h1>Operación diaria</h1>
+        </div>
+        <button type="button" id="clearData">Limpiar reservas</button>
+      </header>
+      <section class="metrics" id="resumen">
+        <article><span>Reservas</span><strong id="totalBookings">0</strong><small>Guardadas en este navegador</small></article>
+        <article><span>Pendientes</span><strong id="pendingBookings">0</strong><small>Requieren respuesta</small></article>
+        <article><span>Servicio top</span><strong id="topService">-</strong><small>Más solicitado</small></article>
+      </section>
+      <section class="panel" id="reservas">
+        <div class="panel-header"><p>Agenda</p><h2>Reservas recientes</h2></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Cliente</th><th>Servicio</th><th>Fecha</th><th>WhatsApp</th><th>Estado</th></tr></thead>
+            <tbody id="bookingRows"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel" id="servicios">
+        <div class="panel-header"><p>Catálogo</p><h2>Servicios</h2></div>
+        <div class="service-list" id="serviceList"></div>
+      </section>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>

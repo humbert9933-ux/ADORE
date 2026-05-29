@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard | ADÓRE</title>
+    <meta name="description" content="Panel administrativo de ADÓRE Centro Estético." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <aside class="admin-sidebar">
+      <a class="admin-brand" href="index.html" aria-label="Volver al sitio">
+        <img src="assets/adore-logo.jpg" alt="Logo de ADÓRE Centro Estético" />
+        <span>ADÓRE</span>
+      </a>
+      <nav aria-label="Administración">
+        <a class="active" href="#resumen">Resumen</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#promos">Promos</a>
+        <a href="#mensajes">Mensajes</a>
+      </nav>
+      <a class="site-link" href="index.html">Ver sitio público</a>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <p>Panel administrativo</p>
+          <h1>Operación diaria</h1>
+        </div>
+        <div class="topbar-actions">
+          <button type="button" id="seedData">Cargar demo</button>
+          <button type="button" id="clearData">Limpiar</button>
+        </div>
+      </header>
+
+      <section class="metrics" id="resumen" aria-label="Indicadores principales">
+        <article>
+          <span>Reservas hoy</span>
+          <strong id="todayBookings">0</strong>
+          <small>Citas para confirmar</small>
+        </article>
+        <article>
+          <span>Ingresos estimados</span>
+          <strong id="estimatedRevenue">Bs 0</strong>
+          <small>Según servicios agendados</small>
+        </article>
+        <article>
+          <span>Pendientes</span>
+          <strong id="pendingBookings">0</strong>
+          <small>Requieren respuesta</small>
+        </article>
+        <article>
+          <span>Servicio top</span>
+          <strong id="topService">-</strong>
+          <small>Más solicitado</small>
+        </article>
+      </section>
+
+      <section class="admin-grid">
+        <section class="panel reservations-panel" id="reservas">
+          <div class="panel-header">
+            <div>
+              <p>Agenda</p>
+              <h2>Reservas recientes</h2>
+            </div>
+            <select id="statusFilter" aria-label="Filtrar reservas por estado">
+              <option value="all">Todas</option>
+              <option value="Pendiente">Pendientes</option>
+              <option value="Confirmada">Confirmadas</option>
+              <option value="Completada">Completadas</option>
+            </select>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Servicio</th>
+                  <th>Fecha</th>
+                  <th>WhatsApp</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="bookingRows"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel" id="servicios">
+          <div class="panel-header compact">
+            <div>
+              <p>Catálogo</p>
+              <h2>Servicios activos</h2>
+            </div>
+          </div>
+          <div class="service-list" id="serviceList"></div>
+        </section>
+
+        <section class="panel" id="promos">
+          <div class="panel-header compact">
+            <div>
+              <p>Marketing</p>
+              <h2>Promoción vigente</h2>
+            </div>
+          </div>
+          <div class="promo-box">
+            <strong>40% de descuento</strong>
+            <span>Campaña en todos los servicios de ADÓRE.</span>
+            <button type="button">Editar campaña</button>
+          </div>
+        </section>
+
+        <section class="panel" id="mensajes">
+          <div class="panel-header compact">
+            <div>
+              <p>Atención</p>
+              <h2>Mensajes rápidos</h2>
+            </div>
+          </div>
+          <div class="message-list">
+            <button type="button">Confirmar cita</button>
+            <button type="button">Enviar ubicación</button>
+            <button type="button">Recordar promoción</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

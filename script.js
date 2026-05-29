@@ -3,7 +3,6 @@ const STORAGE_KEY = "adoreBookings";
 
 const createBooking = async (booking) => {
   try {
-    // Intenta enviar los datos al servidor API si está corriendo localmente
     const response = await fetch("/api/bookings", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -13,7 +12,6 @@ const createBooking = async (booking) => {
     if (!response.ok) throw new Error("Usando almacenamiento alternativo");
     return response.json();
   } catch {
-    // Respaldo automático ideal para cuando está alojado estáticamente en GitHub Pages
     const bookings = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
     bookings.unshift(booking);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(bookings));
